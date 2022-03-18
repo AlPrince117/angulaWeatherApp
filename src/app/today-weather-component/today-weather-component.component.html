@@ -1,0 +1,22 @@
+<div id="todayWeather">
+    <div class="todayWeatherRow" id="cloudy"><img src="../../assets/images/cloudy.png"></div>
+    <div class="todayWeatherRow" id="weatherMain" *ngIf="showDegree">{{WeatherData.temp_main_celcius}}° </div>
+    <div class="todayWeatherRow" id="minMax" *ngIf="showDegree">{{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°</div>
+    <div class="todayWeatherRow" id="feelsLike" *ngIf="showDegree">Feels like {{WeatherData.temp_feels_like}}°</div>
+    <div class="todayWeatherRow" id="weatherMain" *ngIf="showFahrenheit">{{WeatherData.temp_main_fahrenheit}}°F </div>
+    <div class="todayWeatherRow" id="minMax" *ngIf="showFahrenheit">{{WeatherData.temp_min_fahrenheit}}°F / {{WeatherData.temp_max_fahrenheit}}°F</div>
+    <div class="todayWeatherRow" id="feelsLike" *ngIf="showFahrenheit">Feels like {{WeatherData.temp_feels_like_fahrenheit}}°F</div>
+    <div class="todayWeatherRow" id="loc">{{WeatherData.location}}</div>
+    
+</div>
+
+<div class="todayWeatherRow" id="switch">
+    C
+    <label class="switch" >
+      <input type="checkbox" (change)="toggleTag">
+      <span class="slider round"></span>
+    </label>
+    F
+  </div>
+
+

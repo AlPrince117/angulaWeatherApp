@@ -1,0 +1,131 @@
+#todayWeather{
+    display: block;
+    border-radius: 10px;
+    width: 291px;
+    height: 402px;
+    background-color: #1673A7;
+    margin: auto;
+    margin-bottom: 25px;
+
+}
+
+#weatherMain{
+    font-family: Roboto;
+    font-size: 68px;
+    align-self: center;
+    color: #FFFEFE;
+}
+
+.todayWeatherRow{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#minMax{
+    font-size: 16px;
+    font-family: Roboto;
+    align-content: center;
+    line-height: 19px;
+    line-height: 100%;
+    color: #FFF;
+    margin-bottom: 10px;
+
+}
+
+#feelsLike{
+    font-family: Roboto;
+    font-size: 22px;
+    line-height: 26px;
+    align-content: center;
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+#loc{
+    font-size: 34px;
+    font-family: Roboto;
+    align-content: center;
+    color: #FFFDFD;
+}
+
+img{
+    width: 140px;
+    height: auto;
+    margin: 20px;
+    align-self: center;
+}
+
+@media screen and (max-width: 480px) {
+    img{
+        width: 140px;
+        height: auto;
+        margin: 20px;
+        align-self: center;
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  #switch{
+      margin: auto;
+      float: right;
+  }
