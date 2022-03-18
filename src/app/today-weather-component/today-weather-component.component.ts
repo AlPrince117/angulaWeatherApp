@@ -10,15 +10,17 @@ export class TodayWeatherComponentComponent implements OnInit {
   WeatherData: any;
   constructor() { }
 
-  showDegree:boolean = false;
-  showFahrenheit: boolean = true;
+  showDegree:boolean = true;
+  showFahrenheit: boolean = false;
 
   ngOnInit(): void {
     this.getWeatherData();
     console.log(this.WeatherData);
+    
   }
 
   toggleTag(){
+    console.log("toggle changed")
     this.showDegree= !this.showDegree
     this.showFahrenheit = !this.showFahrenheit
   }
@@ -31,6 +33,7 @@ export class TodayWeatherComponentComponent implements OnInit {
   setWeatherData(data: any){
     this.WeatherData = data;
     let currentDate = new Date();
+    let sunsetTime = new Date(this.WeatherData.sys.sunset * 1000)
     this.WeatherData.temp_main_celcius = (this.WeatherData.main.temp -273.15).toFixed(0);
     this.WeatherData.temp_main_fahrenheit = (this.WeatherData.temp_main_celcius * 9/5) + 32;
     this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_like -273.15).toFixed(0);
